@@ -1,3 +1,5 @@
+[Versión en español](README.md)
+
 # Custom `.zshrc` Configuration
 
 This repository contains a custom `.zshrc` file configured to use **Oh My Zsh** with the **Powerlevel10k** theme. This configuration enhances your terminal experience on Ubuntu with advanced visual elements and includes a unique feature for managing aliases.
@@ -38,6 +40,7 @@ This repository contains a custom `.zshrc` file configured to use **Oh My Zsh** 
 
 7. **Additional Notes:**
    - If you experience any issues or need to revert to your previous configuration, you can restore your backup with:
+
      ```bash
      mv ~/.zshrc.backup ~/.zshrc
      ```
