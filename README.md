@@ -4,6 +4,7 @@
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Ubuntu](https://img.shields.io/badge/Ubuntu-20.04%2B-orange)]()
+[🇪🇸 Español](README.es.md)
 
 **Custom .zshrc configuration for Ubuntu with Oh My Posh and a custom alias manager for an enhanced terminal workflow.**
 
