@@ -6,7 +6,7 @@
 [![Ubuntu](https://img.shields.io/badge/Ubuntu-20.04%2B-orange)]()
 
 
-[🇬🇧 English](README.md)
+[English](README.md)
 
 **Configuración personalizada de `.zshrc` para Ubuntu con Oh My Posh y un gestor de alias propio para mejorar el flujo de trabajo en terminal.**
 
