@@ -9,10 +9,12 @@
 
 </div>
 
-🌐 **También disponible en:** [Inglés](README.md)
 
 ---
 
+🌐 **También disponible en:** [Inglés](README.md)
+
+---
 ## Descripción
 
 Este repositorio ofrece una configuración de `.zshrc` lista para producción para Ubuntu, construida sobre **Oh My Zsh** con el tema **Powerlevel10k**. Incluye una función única de gestión de alias llamada `aliash` que muestra todos los alias configurados agrupados por categoría, haciendo la navegación por terminal y la administración del sistema más rápidas y organizadas.

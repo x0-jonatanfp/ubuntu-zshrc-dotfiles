@@ -9,10 +9,12 @@
 
 </div>
 
-🌐 **Also available in:** [Spanish](README.es.md)
 
 ---
 
+🌐 **Also available in:** [Spanish](README.es.md)
+
+---
 ## Overview
 
 This repository provides a production-ready `.zshrc` configuration for Ubuntu, built on **Oh My Zsh** with the **Powerlevel10k** theme. It includes a unique alias management function called `aliash` that displays all configured aliases grouped by category, making terminal navigation and system administration faster and more organized.
