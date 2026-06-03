@@ -1,62 +1,106 @@
-[Read in English](README.en.md)
+<div align="center">
 
-# Configuración Personalizada de `.zshrc`
+# Ubuntu .zshrc Dotfiles
 
-## 🔍 Vista previa
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Ubuntu](https://img.shields.io/badge/Ubuntu-20.04%2B-orange)]()
 
-![Terminal Example](assets/example.png)
+**Custom .zshrc configuration for Ubuntu with Oh My Posh and a custom alias manager for an enhanced terminal workflow.**
 
-Este repositorio contiene un archivo `.zshrc` personalizado configurado para usar **Oh My Zsh** con el tema **Powerlevel10k**. Esta configuración mejora tu experiencia en la terminal en Ubuntu con elementos visuales avanzados e incluye una función única para gestionar alias.
+</div>
 
-## Instrucciones de Instalación
+---
 
-1. **Instalar Zsh:**
-   - Asegúrate de que Zsh esté instalado en tu sistema. Si no está instalado, puedes hacerlo con:
-     ```bash
-     sudo apt update
-     sudo apt install zsh
-     ```
+## Overview
 
-2. **Descarga e Instala Oh My Zsh:**
-   - Sigue las instrucciones de instalación de Oh My Zsh en la [documentación oficial](https://ohmyz.sh/).
+This repository provides a production-ready `.zshrc` configuration for Ubuntu, built on **Oh My Zsh** with the **Powerlevel10k** theme. It includes a unique alias management function called `aliash` that displays all configured aliases grouped by category, making terminal navigation and system administration faster and more organized.
 
-3. **Instala el Tema Powerlevel10k:**
-   - Sigue las [instrucciones de instalación de Powerlevel10k](https://github.com/romkatv/powerlevel10k#oh-my-zsh) para configurar el tema.
+![Terminal Preview](assets/example.png)
 
-4. **Aplica la Configuración Personalizada de `.zshrc`:**
-   - Copia el archivo `.zshrc` desde este repositorio a tu directorio personal:
-     ```bash
-     curl -L https://raw.githubusercontent.com/jonatanfp-dev/custom-zshrc/master/.zshrc -o ~/.zshrc
-     ```
-   - Reinicia tu terminal o aplica los cambios con:
-     ```bash
-     source ~/.zshrc o omz reload
-     ```
+---
 
-5. **Uso de la Función de Alias:**
-   - Después de instalar el archivo `.zshrc`, puedes ver todos los alias definidos y sus descripciones ejecutando:
-     ```bash
-     aliash
-     ```
+## Features
 
-6. **Personalización Adicional:**
-   - Puedes añadir o eliminar plugins y comandos según tus necesidades en el archivo `.zshrc`.
+- **Powerlevel10k prompt** — Fast, customizable prompt with git status and context-aware visuals
+- **aliash alias manager** — Built-in function to display aliases grouped by category (Fail2Ban, system services, file management, networking, and more)
+- **Plugin-optimized** — Includes command-not-found, fzf, git, history-substring-search, sudo, tmux, zsh-autosuggestions, and zsh-syntax-highlighting
+- **lsd integration** — Modern directory listing with icons and group sorting
+- **Fail2Ban shortcuts** — Quick alias commands for checking and unbanning IPs
+- **System service aliases** — Quickly start and stop common services (SSH, web servers, databases)
+- **System maintenance** — Update, clean, and purge commands streamlined
 
-7. **Notas Adicionales:**
-   - Si experimentas problemas o necesitas revertir a tu configuración anterior, puedes restaurar tu copia de seguridad con:
+---
 
-     ```bash
-     mv ~/.zshrc.backup ~/.zshrc
-     ```
+## Quick Start
 
-   - Para más información sobre Oh My Zsh y Powerlevel10k, consulta su documentación:
-     - [Documentación de Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh/wiki)
-     - [Documentación de Powerlevel10k](https://github.com/romkatv/powerlevel10k)
+### Prerequisites
 
-¡Disfruta de tu experiencia mejorada en la terminal!
+- Ubuntu 20.04+
+- Zsh installed (`sudo apt install zsh`)
+- curl or wget
 
-## 📫 Contacto
+### Installation
 
-- **Email:** [info@jonatanfp.net](mailto:info@jonatanfp.net)
-- **Instagram:** [@jonatanfp\_](https://instagram.com/jonatanfp_)
-- **X Corp:** [@jonatanfp\_](https://twitter.com/jonatanfp_)
+```bash
+# 1. Install Oh My Zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# 2. Install Powerlevel10k theme
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+# 3. Apply the custom .zshrc
+curl -L https://raw.githubusercontent.com/x0-jonatanfp/ubuntu-zshrc-dotfiles/main/.zshrc -o ~/.zshrc
+
+# 4. Reload your terminal
+source ~/.zshrc
+```
+
+### Using aliash
+
+After installation, run `aliash` in your terminal to see all available aliases organized by group:
+
+```bash
+aliash
+```
+
+This will display a color-coded list of all defined aliases with their descriptions, grouped by category (Fail2Ban, file management, services, etc.).
+
+---
+
+## Customization
+
+### Plugins
+
+Edit the `plugins` array in `.zshrc` to add or remove plugins:
+
+```zsh
+plugins=(command-not-found fzf git history-substring-search sudo tmux zsh-autosuggestions zsh-syntax-highlighting)
+```
+
+### Alias Groups
+
+Aliases are organized in clearly marked sections within the `.zshrc` file. Each group starts with a `# Group:` comment. To add a new alias, simply follow the existing pattern:
+
+```zsh
+# Group: My Group
+alias my-alias='command' # Description of what this alias does
+```
+
+### Prompt Theme
+
+The Powerlevel10k prompt can be configured interactively:
+
+```zsh
+p10k configure
+```
+
+---
+
+## Project Structure
+
+```
+ubuntu-zshrc-dotfiles/
+├── .zshrc              # Main Zsh configuration file
+└── assets/
+    └── example.png     # Terminal preview screenshot
+```
